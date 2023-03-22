@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "foodfight",
+  "version": "${version}",
+
+  "name": "Food Fight Mod",
+  "description": "Adds the ability to throw food with left click like an egg or snowball would be thrown.",
+  "authors": [
+    "Bjorn Nordenflycht"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC BY-NC-SA 3.0",
+  "icon": "assets/foodfight/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "bjornoid.food.fight.FoodFight"
+    ]
+  },
+  "mixins": [
+    "foodfight.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
