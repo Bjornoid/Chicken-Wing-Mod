@@ -20,4 +20,5 @@ public class ChickenWingItem extends Item {
         }
         super.usageTick(world, user, stack, remainingUseTicks);
     }
+
 }

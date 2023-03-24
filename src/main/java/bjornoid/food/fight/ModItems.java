@@ -11,8 +11,13 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item CHICKEN_WING = registerItem("chicken_wing", new ChickenWingItem(new FabricItemSettings()
-            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+    public static final Item CHICKEN_WING = registerItem("chicken_wing",
+            new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+
+    public static final Item SPICY_CHICKEN_WING = registerItem("spicy_chicken_wing",
+            new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
 
     public static final Item WING_BONE = registerItem("wing_bone", new Item(new FabricItemSettings()));
 
@@ -25,6 +30,7 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, CHICKEN_WING);
+        addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, SPICY_CHICKEN_WING);
         addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, WING_BONE);
         addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, REDHOT);
     }
