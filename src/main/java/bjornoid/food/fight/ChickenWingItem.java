@@ -12,16 +12,12 @@ public class ChickenWingItem extends Item {
     }
 
     @Override
-    public boolean isUsedOnRelease(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+    public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
         if (!world.isClient) {
-            user.setStackInHand(Hand.MAIN_HAND, new ItemStack(ModItems.WING_BONE));
+            if (remainingUseTicks == 1) {
+                user.setStackInHand(Hand.MAIN_HAND, new ItemStack(ModItems.WING_BONE));
+            }
         }
-
-        super.onStoppedUsing(stack, world, user, remainingUseTicks);
+        super.usageTick(world, user, stack, remainingUseTicks);
     }
 }
