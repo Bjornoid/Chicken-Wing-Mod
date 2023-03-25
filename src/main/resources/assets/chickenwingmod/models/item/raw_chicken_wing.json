@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chickenwingmod:item/wing_bone"
+        "layer0": "chickenwingmod:item/raw_chicken_wing"
     }
 }

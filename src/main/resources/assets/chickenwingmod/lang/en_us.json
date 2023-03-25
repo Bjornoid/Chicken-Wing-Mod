@@ -1,8 +1,8 @@
 {
+    "item.chickenwingmod.raw_chicken_wing" : "Raw Chicken Wing",
     "item.chickenwingmod.chicken_wing" : "Chicken Wing",
     "item.chickenwingmod.spicy_chicken_wing" : "Spicy Chicken Wing",
     "item.chickenwingmod.bbq_chicken_wing" : "BBQ Chicken Wing",
-    "item.chickenwingmod.wing_bone" : "Wing Bone",
     "item.chickenwingmod.redhot" : "Frank's RedHot",
 
     "itemGroup.chickenwingmod.chicken_wing_mod" : "Chicken Wing Mod"
