@@ -30,6 +30,10 @@ public class ModItems {
             new ChickenWingItem(new FabricItemSettings().maxCount(1)
                     .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).meat().build())));
 
+    public static final Item HONEYBBQ_CHICKEN_WING = registerItem("honeybbq_chicken_wing",
+            new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.6f).meat().build())));
+
     public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
@@ -42,6 +46,7 @@ public class ModItems {
         addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING);
         addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, SPICY_CHICKEN_WING);
         addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, BBQ_CHICKEN_WING);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, HONEYBBQ_CHICKEN_WING);
         addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
     }
 
