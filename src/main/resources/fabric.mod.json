@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "foodfight",
+  "id": "chickenwingmod",
   "version": "${version}",
 
-  "name": "Food Fight Mod",
-  "description": "Adds the ability to throw food with left click like an egg or snowball would be thrown.",
+  "name": "Chicken Wing Mod",
+  "description": "Adds the ability to cut raw chicken into wings and cook them, then make them different flavors with the wing sauce bowl.",
   "authors": [
     "Bjorn Nordenflycht"
   ],
@@ -14,16 +14,16 @@
   },
 
   "license": "CC BY-NC-SA 3.0",
-  "icon": "assets/foodfight/icon.png",
+  "icon": "assets/chickenwingmod/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "bjornoid.food.fight.FoodFight"
+      "bjornoid.chicken.wing.mod.ChickenWingMod"
     ]
   },
   "mixins": [
-    "foodfight.mixins.json"
+    "chickenwingmod.mixins.json"
   ],
 
   "depends": {

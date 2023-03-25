@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "foodfight:item/redhot"
+        "layer0": "chickenwingmod:item/wing_bone"
     }
 }

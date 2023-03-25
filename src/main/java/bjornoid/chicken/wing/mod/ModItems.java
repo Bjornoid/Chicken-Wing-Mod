@@ -1,4 +1,4 @@
-package bjornoid.food.fight;
+package bjornoid.chicken.wing.mod;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -19,20 +19,25 @@ public class ModItems {
             new ChickenWingItem(new FabricItemSettings().maxCount(1)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
 
+    public static final Item BBQ_CHICKEN_WING = registerItem("bbq_chicken_wing",
+            new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+
     public static final Item WING_BONE = registerItem("wing_bone", new Item(new FabricItemSettings()));
 
     public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
 
-        return Registry.register(Registries.ITEM, new Identifier("foodfight", name), item);
+        return Registry.register(Registries.ITEM, new Identifier("chickenwingmod", name), item);
     }
 
     public static void addItemsToItemGroup() {
-        addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, CHICKEN_WING);
-        addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, SPICY_CHICKEN_WING);
-        addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, WING_BONE);
-        addToItemGroup(ModItemGroup.FOOD_FIGHT_GROUP, REDHOT);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, SPICY_CHICKEN_WING);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, BBQ_CHICKEN_WING);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, WING_BONE);
+        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
@@ -40,7 +45,7 @@ public class ModItems {
     }
 
     public static void registerModItems() {
-        FoodFight.LOGGER.debug("Registering Mod Items for foodfight");
+        ChickenWingMod.LOGGER.debug("Registering Mod Items for chicken wing mod");
 
         addItemsToItemGroup();
     }

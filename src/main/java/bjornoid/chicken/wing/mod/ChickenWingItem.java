@@ -1,4 +1,4 @@
-package bjornoid.food.fight;
+package bjornoid.chicken.wing.mod;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
