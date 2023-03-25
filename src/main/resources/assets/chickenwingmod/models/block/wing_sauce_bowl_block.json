@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures" :{
+        "all" : "chickenwingmod:block/wing_sauce_bowl_block"
+    }
+}
