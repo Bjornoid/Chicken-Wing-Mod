@@ -1,5 +1,8 @@
 {
     "variants" : {
-        "" : { "model" : "chickenwingmod:block/wing_sauce_bowl_block"}
+        "facing=north" : { "model" : "chickenwingmod:block/wing_sauce_bowl_block"},
+        "facing=east" : { "model" : "chickenwingmod:block/wing_sauce_bowl_block", "y": 90 }, 
+        "facing=south" : { "model" : "chickenwingmod:block/wing_sauce_bowl_block", "y" : 180},
+        "facing=west" : { "model" : "chickenwingmod:block/wing_sauce_bowl_block", "y" : 270}
     }
 }

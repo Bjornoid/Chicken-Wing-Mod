@@ -3,7 +3,9 @@ package bjornoid.chicken.wing.mod;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,7 +17,9 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block WING_SAUCE_BOWL_BLOCK = registerBlock("wing_sauce_bowl_block",
-            new Block(FabricBlockSettings.of(Material.STRUCTURE_VOID).strength(4.0f)), ModItemGroup.CHICKEN_WING_GROUP);
+            new WingSauceBowlBlock(AbstractBlock.Settings.of(Material.METAL, MapColor.STONE_GRAY).requiresTool()
+                    .strength(2.0f).nonOpaque()),
+            ModItemGroup.CHICKEN_WING_GROUP);
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);

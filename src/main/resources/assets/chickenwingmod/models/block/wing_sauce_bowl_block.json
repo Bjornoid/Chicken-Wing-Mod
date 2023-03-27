@@ -1,6 +1,31 @@
 {
-    "parent": "block/cube_all",
-    "textures" :{
-        "all" : "chickenwingmod:block/wing_sauce_bowl_block"
-    }
+	"credit": "Made with Blockbench",
+	"texture_size": [256, 256],
+	"textures": {
+		"0": "chickenwingmod:block/wing_sauce_bowl_block",
+		"particle": "chickenwingmod:block/wing_sauce_bowl_block"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 11, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 3.90909, 7], "texture": "#0"},
+				"east": {"uv": [0, 0, 3.81818, 6.63636], "texture": "#0"},
+				"south": {"uv": [0, 0, 3.72727, 6.90909], "texture": "#0"},
+				"west": {"uv": [0, 0, 3.45455, 6.90909], "texture": "#0"},
+				"up": {"uv": [3.18182, 1.36364, 13.09091, 14.45455], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0.72727, 10.09091, 1.72727, 11.09091], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {},
+	"groups": [
+		{
+			"name": "side",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
 }
