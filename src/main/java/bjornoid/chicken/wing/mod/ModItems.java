@@ -12,51 +12,67 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item RAW_CHICKEN_WING = registerItem("raw_chicken_wing",
-            new ChickenWingItem(new FabricItemSettings().maxCount(1)
-                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 0), 0.3f).meat()
-                            .build())));
+        public static final Item RAW_CHICKEN_WING = registerItem("raw_chicken_wing",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f)
+                                                        .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,
+                                                                        600, 0), 0.3f)
+                                                        .meat()
+                                                        .build())));
 
-    public static final Item CHICKEN_WING = registerItem("chicken_wing",
-            new ChickenWingItem(new FabricItemSettings().maxCount(1)
-                    .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.2f).meat().build())));
+        public static final Item CHICKEN_WING = registerItem("chicken_wing",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(3).saturationModifier(1.2f).meat()
+                                                        .build())));
 
-    public static final Item SPICY_CHICKEN_WING = registerItem("spicy_chicken_wing",
-            new ChickenWingItem(new FabricItemSettings().maxCount(1)
-                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).meat().build())));
+        public static final Item SPICY_CHICKEN_WING = registerItem("spicy_chicken_wing",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).meat()
+                                                        .build())));
 
-    public static final Item BBQ_CHICKEN_WING = registerItem("bbq_chicken_wing",
-            new ChickenWingItem(new FabricItemSettings().maxCount(1)
-                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).meat().build())));
+        public static final Item BBQ_CHICKEN_WING = registerItem("bbq_chicken_wing",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).meat()
+                                                        .build())));
 
-    public static final Item HONEYBBQ_CHICKEN_WING = registerItem("honeybbq_chicken_wing",
-            new ChickenWingItem(new FabricItemSettings().maxCount(1)
-                    .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.6f).meat().build())));
+        public static final Item HONEYBBQ_CHICKEN_WING = registerItem("honeybbq_chicken_wing",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.6f).meat()
+                                                        .build())));
 
-    public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
+        public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
 
-    private static Item registerItem(String name, Item item) {
+        public static final Item CHICKEN_WING_DIP = registerItem("chicken_wing_dip",
+                        new Item(new FabricItemSettings()
+                                        .food(new FoodComponent.Builder().hunger(14).saturationModifier(2.8f)
+                                                        .statusEffect(new StatusEffectInstance(
+                                                                        StatusEffects.REGENERATION, 100, 1), 1.0f)
+                                                        .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,
+                                                                        2400, 0), 1.0f)
+                                                        .alwaysEdible().build())));
 
-        return Registry.register(Registries.ITEM, new Identifier("chickenwingmod", name), item);
-    }
+        private static Item registerItem(String name, Item item) {
 
-    public static void addItemsToItemGroup() {
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, RAW_CHICKEN_WING);
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING);
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, SPICY_CHICKEN_WING);
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, BBQ_CHICKEN_WING);
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, HONEYBBQ_CHICKEN_WING);
-        addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
-    }
+                return Registry.register(Registries.ITEM, new Identifier("chickenwingmod", name), item);
+        }
 
-    private static void addToItemGroup(ItemGroup group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
+        public static void addItemsToItemGroup() {
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, RAW_CHICKEN_WING);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, SPICY_CHICKEN_WING);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, BBQ_CHICKEN_WING);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, HONEYBBQ_CHICKEN_WING);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING_DIP);
+        }
 
-    public static void registerModItems() {
-        ChickenWingMod.LOGGER.debug("Registering Mod Items for chicken wing mod");
+        private static void addToItemGroup(ItemGroup group, Item item) {
+                ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+        }
 
-        addItemsToItemGroup();
-    }
+        public static void registerModItems() {
+                ChickenWingMod.LOGGER.debug("Registering Mod Items for chicken wing mod");
+
+                addItemsToItemGroup();
+        }
 }
