@@ -1,0 +1,23 @@
+{
+    "type" : "minecraft:crafting_shaped",
+    "category" : "equipment",
+    "key" : {
+        "#" : {
+            "item" : "chickenwingmod:chicken_wing"
+        },
+        "*" : {
+            "item" : "minecraft:bone"
+        },
+        "$" : {
+            "item" : "minecraft:diamond"
+        }
+    },
+    "pattern" : [
+        "$$$",
+        "$#$",
+        " * "
+    ],
+    "result" : {
+        "item": "chickenwingmod:diamond_chicken_wing_tool"
+    }
+}

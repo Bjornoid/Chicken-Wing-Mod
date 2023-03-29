@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -56,6 +57,9 @@ public class ModItems {
                                                                         2400, 0), 1.0f)
                                                         .alwaysEdible().build())));
 
+        public static final Item DIAMOND_CHICKEN_WING_TOOL = registerItem("diamond_chicken_wing_tool",
+                        new ChickenWingToolItem(ToolMaterials.DIAMOND, new FabricItemSettings()));
+
         private static Item registerItem(String name, Item item) {
 
                 return Registry.register(Registries.ITEM, new Identifier("chickenwingmod", name), item);
@@ -71,6 +75,7 @@ public class ModItems {
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL_FRAGMENT);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING_DIP);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, DIAMOND_CHICKEN_WING_TOOL);
         }
 
         private static void addToItemGroup(ItemGroup group, Item item) {

@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "chickenwingmod:item/diamond_chicken_wing_tool"
+    }
+}
