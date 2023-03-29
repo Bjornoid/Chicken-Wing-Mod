@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "chickenwingmod:glass_bowl"
+      }
+    ],
+    "result": {
+      "count": 3,
+      "item": "chickenwingmod:glass_bowl_fragment"
+    }
+  }

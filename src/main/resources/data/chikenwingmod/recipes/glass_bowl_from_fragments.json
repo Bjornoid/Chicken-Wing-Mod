@@ -1,0 +1,17 @@
+{
+    "type" : "minecraft:crafting_shaped",
+    "category" : "misc",
+    "key" : {
+        "#" : {
+            "item" : "chickenwingmod:glass_bowl_fragment"
+    }
+},
+    "pattern" : [
+        "   ",
+        "###",
+        "###"
+    ],
+    "result" : {
+        "item": "chickenwingmod:glass_bowl"
+    }
+}

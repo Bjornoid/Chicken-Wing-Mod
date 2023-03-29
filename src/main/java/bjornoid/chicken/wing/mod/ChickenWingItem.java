@@ -19,8 +19,10 @@ public class ChickenWingItem extends Item {
         if (!world.isClient) {
             if (remainingUseTicks == 1) {
                 if (stack.getName().equals(ModItems.RAW_CHICKEN_WING.getName())) {
-
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600, 0));
+                } else if (stack.getName().equals(ModItems.CHICKEN_WING_DIP.getName())) {
+                    user.setStackInHand(Hand.MAIN_HAND, new ItemStack(ModItems.GLASS_BOWL));
+                    return;
                 }
                 user.setStackInHand(Hand.MAIN_HAND, new ItemStack(Items.BONE));
             }

@@ -8,17 +8,14 @@
         "*" : {
             "item" : "chickenwingmod:chicken_wing"
         },
-        "|" : {
-            "item" : "chickenwingmod:spicy_chicken_wing"
-        },
         "$" : {
-            "item" : "minecraft:glass"
+            "item" : "chickenwingmod:glass_bowl"
         }
     },
     "pattern" : [
         "###",
-        "|*|",
-        "$$$"
+        "***",
+        " $ "
     ],
     "result" : {
         "item": "chickenwingmod:chicken_wing_dip"

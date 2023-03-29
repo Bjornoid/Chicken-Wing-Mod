@@ -42,6 +42,11 @@ public class ModItems {
 
         public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
 
+        public static final Item GLASS_BOWL_FRAGMENT = registerItem("glass_bowl_fragment",
+                        new Item(new FabricItemSettings()));
+
+        public static final Item GLASS_BOWL = registerItem("glass_bowl", new Item(new FabricItemSettings()));
+
         public static final Item CHICKEN_WING_DIP = registerItem("chicken_wing_dip",
                         new Item(new FabricItemSettings()
                                         .food(new FoodComponent.Builder().hunger(14).saturationModifier(2.8f)
@@ -63,6 +68,8 @@ public class ModItems {
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, BBQ_CHICKEN_WING);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, HONEYBBQ_CHICKEN_WING);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL_FRAGMENT);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING_DIP);
         }
 
