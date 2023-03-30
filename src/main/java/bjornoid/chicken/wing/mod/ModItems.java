@@ -2,8 +2,6 @@ package bjornoid.chicken.wing.mod;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,8 +14,6 @@ public class ModItems {
         public static final Item RAW_CHICKEN_WING = registerItem("raw_chicken_wing",
                         new ChickenWingItem(new FabricItemSettings().maxCount(1)
                                         .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.3f)
-                                                        .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,
-                                                                        600, 0), 0.3f)
                                                         .meat()
                                                         .build())));
 
@@ -49,12 +45,8 @@ public class ModItems {
         public static final Item GLASS_BOWL = registerItem("glass_bowl", new Item(new FabricItemSettings()));
 
         public static final Item CHICKEN_WING_DIP = registerItem("chicken_wing_dip",
-                        new Item(new FabricItemSettings()
+                        new ChickenWingItem(new FabricItemSettings()
                                         .food(new FoodComponent.Builder().hunger(14).saturationModifier(2.8f)
-                                                        .statusEffect(new StatusEffectInstance(
-                                                                        StatusEffects.REGENERATION, 100, 1), 1.0f)
-                                                        .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,
-                                                                        2400, 0), 1.0f)
                                                         .alwaysEdible().build())));
 
         public static final Item DIAMOND_CHICKEN_WING_TOOL = registerItem("diamond_chicken_wing_tool",
