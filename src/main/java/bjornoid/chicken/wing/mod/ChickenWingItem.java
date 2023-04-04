@@ -3,6 +3,7 @@ package bjornoid.chicken.wing.mod;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -25,6 +26,7 @@ public class ChickenWingItem extends Item {
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1));
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 0));
                     user.setStackInHand(Hand.MAIN_HAND, new ItemStack(ModItems.GLASS_BOWL));
+                    super.use(world, (PlayerEntity) user, Hand.MAIN_HAND);
                 } else {
                     user.setStackInHand(Hand.MAIN_HAND, new ItemStack(Items.BONE));
                 }

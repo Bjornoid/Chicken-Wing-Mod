@@ -49,7 +49,7 @@ public class ModItems {
         public static final Item CHICKEN_WING_DIP = registerItem("chicken_wing_dip",
                         new ChickenWingItem(new FabricItemSettings()
                                         .food(new FoodComponent.Builder().hunger(14).saturationModifier(2.8f)
-                                                        .alwaysEdible().build())));
+                                                        .build())));
 
         public static final Item DIAMOND_CHICKEN_WING_TOOL = registerItem("diamond_chicken_wing_tool",
                         new ChickenWingToolItem(ToolMaterials.DIAMOND, new FabricItemSettings()));
