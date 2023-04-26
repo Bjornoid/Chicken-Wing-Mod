@@ -18,9 +18,6 @@ import net.minecraft.world.event.GameEvent;
  */
 public class WingSauceBowlBlock
         extends AbstractCauldronBlock {
-    private static final float FILL_WITH_RAIN_CHANCE = 0.05f;
-    private static final float FILL_WITH_SNOW_CHANCE = 0.1f;
-
     public WingSauceBowlBlock(AbstractBlock.Settings settings) {
         super(settings, CauldronBehavior.EMPTY_CAULDRON_BEHAVIOR);
     }
