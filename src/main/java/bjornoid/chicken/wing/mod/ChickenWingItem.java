@@ -25,6 +25,8 @@ public class ChickenWingItem extends Item {
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 1));
                     user.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 0));
                     user.setStackInHand(Hand.MAIN_HAND, new ItemStack(ModItems.GLASS_BOWL));
+                } else if (stack.getName().equals(ModItems.ARMEGEDDON_CHICKEN_WING.getName())) {
+
                 } else {
                     user.setStackInHand(Hand.MAIN_HAND, new ItemStack(Items.BONE));
                 }
