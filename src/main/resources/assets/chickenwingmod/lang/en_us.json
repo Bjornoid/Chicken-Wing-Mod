@@ -7,12 +7,13 @@
     "item.chickenwingmod.honeybbq_chicken_wing" : "Honey BBQ Chicken Wing",
     "item.chickenwingmod.redhot" : "Frank's RedHot",
     "item.chickenwingmod.cayenne_peppers" : "Cayenne Pepper's",
+    "item.chickenwingmod.cayenne_pepper_seeds" : "Cayenne Pepper Seed's",
     "item.chickenwingmod.glass_bowl_fragment" : "Glass Bowl Fragment",
     "item.chickenwingmod.glass_bowl" : "Glass Bowl",
     "item.chickenwingmod.chicken_wing_dip" : "Buffalo Chicken Wing Dip",
     "item.chickenwingmod.diamond_chicken_wing_tool" : "Diamond Chicken Wing Tool",
 
-    "block.chickenwingmod.wing_sauce_bowl_block" : "Wing Sauce Bowl",
+    "itemGroup.chickenwingmod.chicken_wing_mod" : "Chicken Wing Mod",
 
-    "itemGroup.chickenwingmod.chicken_wing_mod" : "Chicken Wing Mod"
+    "block.chickenwingmod.cayenne_pepper_crop" : "Cayenne Pepper Crop"
 }

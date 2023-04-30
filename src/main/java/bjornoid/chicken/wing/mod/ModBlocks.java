@@ -2,10 +2,9 @@ package bjornoid.chicken.wing.mod;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -15,14 +14,13 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
 
-    public static final Block WING_SAUCE_BOWL_BLOCK = registerBlock("wing_sauce_bowl_block",
-            new WingSauceBowlBlock(AbstractBlock.Settings.of(Material.METAL, MapColor.STONE_GRAY).requiresTool()
-                    .strength(2.0f).nonOpaque()),
-            ModItemGroup.CHICKEN_WING_GROUP);
+    public static final Block CAYENNE_PEPPER_CROP = registerBlockWithoutItem("cayenne_pepper_crop",
+            new CayennePepperCropBlock(FabricBlockSettings.copy(Blocks.WHEAT)));
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
-        return Registry.register(Registries.BLOCK, new Identifier("chickenwingmod", name), block);
+        return Registry.register(Registries.BLOCK, new Identifier("chickenwingmod",
+                name), block);
     }
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group) {
@@ -32,7 +30,12 @@ public class ModBlocks {
         return item;
     }
 
+    private static Block registerBlockWithoutItem(String name, Block block) {
+        return Registry.register(Registries.BLOCK, new Identifier("chickenwingmod", name), block);
+    }
+
     public static void registerModBlocks() {
         ChickenWingMod.LOGGER.info("Registering ModBlocks for chickenwingmod");
     }
+
 }

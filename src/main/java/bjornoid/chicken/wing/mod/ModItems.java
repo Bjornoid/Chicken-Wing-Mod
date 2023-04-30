@@ -2,6 +2,7 @@ package bjornoid.chicken.wing.mod;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -44,7 +45,14 @@ public class ModItems {
 
         public static final Item REDHOT = registerItem("redhot", new Item(new FabricItemSettings()));
 
-        public static final Item CAYENNE_PEPPERS = registerItem("cayenne_peppers", new Item(new FabricItemSettings()));
+        public static final Item CAYENNE_PEPPERS = registerItem("cayenne_peppers",
+                        new ChickenWingItem(new FabricItemSettings().maxCount(1)
+                                        .food(new FoodComponent.Builder().hunger(5).saturationModifier(0.6f)
+                                                        .build())));
+
+        public static final Item CAYENNE_PEPPER_SEEDS = registerItem("cayenne_pepper_seeds",
+                        new AliasedBlockItem(ModBlocks.CAYENNE_PEPPER_CROP,
+                                        new FabricItemSettings()));
 
         public static final Item GLASS_BOWL_FRAGMENT = registerItem("glass_bowl_fragment",
                         new Item(new FabricItemSettings()));
@@ -73,6 +81,7 @@ public class ModItems {
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, HONEYBBQ_CHICKEN_WING);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, REDHOT);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CAYENNE_PEPPERS);
+                addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CAYENNE_PEPPER_SEEDS);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL_FRAGMENT);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, GLASS_BOWL);
                 addToItemGroup(ModItemGroup.CHICKEN_WING_GROUP, CHICKEN_WING_DIP);
