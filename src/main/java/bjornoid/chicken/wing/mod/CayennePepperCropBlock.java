@@ -1,5 +1,6 @@
 package bjornoid.chicken.wing.mod;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropBlock;
@@ -10,9 +11,8 @@ import net.minecraft.state.property.IntProperty;
 public class CayennePepperCropBlock extends CropBlock {
     public static final IntProperty AGE = IntProperty.of("age", 0, 6);
 
-    public CayennePepperCropBlock(Settings settings) {
+    public CayennePepperCropBlock(AbstractBlock.Settings settings) {
         super(settings);
-
     }
 
     @Override
